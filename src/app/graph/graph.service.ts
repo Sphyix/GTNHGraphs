@@ -13,8 +13,33 @@ export class GraphService {
   }
 
 
-  getHeroes(): Observable<DimData[]> {
+  getDelta(): Observable<DimData[]> {
     return this.http.get<DimData[]>('https://localhost:44388/data/delta')
+    .pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
+  }
+
+  getEpsilon(): Observable<DimData[]> {
+    return this.http.get<DimData[]>('https://localhost:44388/data/epsilon')
+    .pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
+  }
+  getEta(): Observable<DimData[]> {
+    return this.http.get<DimData[]>('https://localhost:44388/data/eta')
+    .pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
+  }
+  getZeta(): Observable<DimData[]> {
+    return this.http.get<DimData[]>('https://localhost:44388/data/zeta')
     .pipe(
       map((res: any) => {
         return res;
